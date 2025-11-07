@@ -1,4 +1,4 @@
-export default konyvLista = [
+export const konyvLista=[
     {
         cim: "A Gyűrűk Ura",
         szerzo: "J. R. R. Tolkien",
@@ -49,4 +49,4 @@ export default konyvLista = [
         szerzo: "Yuval Noah Harari",
         leiras: "Lenyűgöző tudományos és történelmi áttekintés arról, hogyan vált az ember a Föld uralkodó fajává."
     }
-];
+]
