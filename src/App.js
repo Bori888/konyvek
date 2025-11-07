@@ -1,18 +1,12 @@
 import './App.css';
-import { useState } from "react";
-import { konyvLista } from "./adat";
 import Konyvek from './components/Konyvek';
 import Kosar from './components/Kosar';
+import { KosarContext } from './contexts/KosarContext';
+import { useContext } from "react";
 
 function App() {
 
-  const [kosarLista, setKosarLista]=useState([])
-  function kosarba(adat) {
-    const sl=[...kosarLista]
-    sl.push(konyvLista[adat])
-    setKosarLista([...sl])
-    console.log(kosarLista)
-  }
+  const {kosarLista, konyvLista}=useContext(KosarContext)
 
   return (
     <div className="App">
@@ -26,7 +20,7 @@ function App() {
       </section>
 
       <article>
-        <Konyvek konyvLista={konyvLista} kosarbafv={kosarba} />
+        <Konyvek konyvLista={konyvLista} />
       </article>
 
     </div>
